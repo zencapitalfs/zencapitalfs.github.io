@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zen Capital Financial Services | Mutual Funds, FDs, Bonds &amp; NCDs | ARN-361599</title>
+<meta name="description" content="Zen Capital Financial Services Pvt Ltd — mutual fund distribution, fixed deposits, bonds &amp; NCDs, tax planning and free portfolio review. Serving investors across Maharashtra, Madhya Pradesh, Gujarat and Uttar Pradesh. AMFI Registered, ARN-361599.">
+<meta property="og:title" content="Zen Capital Financial Services">
+<meta property="og:description" content="Wealth creation and safe fixed income, in balance. Mutual Funds · FDs · Bonds &amp; NCDs · Tax Planning · Free Portfolio Review.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15191a;
+    --ink-soft:#2b322e;
+    --paper:#f2eddf;
+    --paper-deep:#e6dfc9;
+    --paper-text:#1c211f;
+    --gold:#b08d57;
+    --gold-soft:#d8c39b;
+    --jade:#2f5d4e;
+    --jade-soft:#4d8672;
+    --muted:#8f9490;
+    --max:1180px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'IBM Plex Sans', sans-serif;
+    background:var(--paper);
+    color:var(--paper-text);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4{
+    font-family:'Spectral', serif;
+    font-weight:500;
+    line-height:1.15;
+  }
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  a{color:inherit; text-decoration:none;}
+  img,svg{display:block; max-width:100%;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
+  ::selection{background:var(--gold-soft); color:var(--ink);}
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(21,25,26,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid rgba(216,195,155,0.15);
+  }
+  nav.wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:76px;
+  }
+  .brand{display:flex; align-items:center; gap:12px; color:var(--paper);}
+  .brand .mark{width:30px; height:30px;}
+  .brand-text{font-family:'Spectral', serif; font-size:1.05rem; letter-spacing:0.02em; color:var(--paper);}
+  .brand-text small{display:block; font-family:'IBM Plex Mono',monospace; font-size:0.6rem; letter-spacing:0.12em; color:var(--gold-soft); text-transform:uppercase; margin-top:2px;}
+  .nav-links{display:flex; gap:36px; align-items:center;}
+  .nav-links a{
+    color:var(--paper); opacity:0.75; font-size:0.88rem; letter-spacing:0.02em;
+    position:relative; padding:4px 0; transition:opacity 0.25s;
+  }
+  .nav-links a::after{
+    content:''; position:absolute; left:0; bottom:-2px; width:0; height:1px; background:var(--gold);
+    transition:width 0.3s ease;
+  }
+  .nav-links a:hover{opacity:1;}
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{
+    background:var(--gold); color:var(--ink) !important; padding:10px 20px; border-radius:2px;
+    font-size:0.82rem; letter-spacing:0.03em; font-weight:500; opacity:1 !important;
+  }
+  .nav-cta::after{display:none;}
+  .nav-cta:hover{background:var(--gold-soft);}
+  .burger{display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px;}
+  .burger span{width:22px; height:1.5px; background:var(--paper);}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:var(--ink); color:var(--paper);
+    padding:170px 0 110px;
+    position:relative;
+    overflow:hidden;
+  }
+  .ripple-field{
+    position:absolute; right:-120px; top:50%; transform:translateY(-50%);
+    width:640px; height:640px; pointer-events:none;
+  }
+  .ripple-field circle{
+    fill:none; stroke:var(--gold); stroke-width:1;
+    opacity:0;
+    animation:ripple 7s ease-out infinite;
+  }
+  .ripple-field circle:nth-child(2){animation-delay:1.4s;}
+  .ripple-field circle:nth-child(3){animation-delay:2.8s;}
+  .ripple-field circle:nth-child(4){animation-delay:4.2s;}
+  @keyframes ripple{
+    0%{r:20; opacity:0.55; stroke-width:1.4;}
+    100%{r:300; opacity:0; stroke-width:0.4;}
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.15fr 0.85fr; gap:40px; align-items:center; position:relative;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--gold-soft); margin-bottom:22px; display:flex; align-items:center; gap:10px;
+  }
+  .eyebrow::before{content:''; width:26px; height:1px; background:var(--gold-soft);}
+  .hero h1{
+    font-size:clamp(2.3rem, 4.6vw, 3.6rem); font-weight:400; color:var(--paper); max-width:14ch;
+  }
+  .hero h1 em{font-style:italic; color:var(--gold-soft); font-weight:300;}
+  .hero p.lede{
+    margin-top:26px; font-size:1.08rem; color:rgba(242,237,223,0.72); max-width:46ch; font-weight:300;
+  }
+  .hero-actions{display:flex; gap:16px; margin-top:40px; flex-wrap:wrap;}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px; padding:14px 26px; font-size:0.88rem;
+    letter-spacing:0.02em; border-radius:2px; transition:all 0.25s ease; cursor:pointer; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--gold); color:var(--ink); font-weight:500;}
+  .btn-primary:hover{background:var(--gold-soft); transform:translateY(-1px);}
+  .btn-ghost{border-color:rgba(242,237,223,0.3); color:var(--paper);}
+  .btn-ghost:hover{border-color:var(--gold-soft); color:var(--gold-soft);}
+  .hero-enso{position:relative; display:flex; align-items:center; justify-content:center;}
+  .enso-svg{width:100%; max-width:380px;}
+  .enso-path{
+    fill:none; stroke:var(--gold); stroke-width:2.5; stroke-linecap:round;
+    stroke-dasharray:900; stroke-dashoffset:900;
+    animation:draw 2.4s cubic-bezier(0.65,0,0.35,1) 0.3s forwards;
+  }
+  @keyframes draw{ to{stroke-dashoffset:0;} }
+  .enso-label{
+    position:absolute; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:0.68rem;
+    letter-spacing:0.08em; color:var(--muted); text-transform:uppercase; line-height:1.9;
+  }
+  .arn-strip{
+    border-top:1px solid rgba(242,237,223,0.12); margin-top:64px; padding-top:22px;
+    display:flex; gap:30px; flex-wrap:wrap; font-family:'IBM Plex Mono',monospace; font-size:0.75rem;
+    color:var(--muted); letter-spacing:0.03em;
+  }
+  .arn-strip strong{color:var(--gold-soft); font-weight:500;}
+
+  /* ---------- SECTION SHELL ---------- */
+  section{padding:100px 0;}
+  .sec-alt{background:var(--paper-deep);}
+  .sec-dark{background:var(--ink); color:var(--paper);}
+  .sec-head{max-width:640px; margin-bottom:56px;}
+  .sec-eyebrow{
+    font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase;
+    color:var(--jade); margin-bottom:16px; display:block;
+  }
+  .sec-dark .sec-eyebrow{color:var(--gold-soft);}
+  .sec-head h2{font-size:clamp(1.8rem,3.2vw,2.5rem); font-weight:400;}
+  .sec-head p{margin-top:16px; color:var(--muted); font-size:1.02rem; max-width:52ch;}
+
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity 0.7s ease, transform 0.7s ease;}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  /* ---------- SERVICES ---------- */
+  .services-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:rgba(21,25,26,0.1);
+    border:1px solid rgba(21,25,26,0.1);
+  }
+  .service-card{
+    background:var(--paper); padding:36px 32px; transition:background 0.3s ease;
+  }
+  .service-card:hover{background:var(--paper-deep);}
+  .service-num{font-family:'IBM Plex Mono',monospace; font-size:0.7rem; color:var(--gold); letter-spacing:0.1em;}
+  .service-card h3{font-size:1.2rem; margin-top:14px; font-weight:500;}
+  .service-card p{margin-top:10px; font-size:0.92rem; color:var(--muted);}
+  .service-tag{
+    display:inline-block; margin-top:16px; font-family:'IBM Plex Mono',monospace; font-size:0.68rem;
+    letter-spacing:0.08em; text-transform:uppercase; color:var(--jade); border:1px solid var(--jade-soft);
+    padding:4px 10px; border-radius:2px;
+  }
+
+  /* ---------- BALANCE INTERACTIVE ---------- */
+  .balance-wrap{display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;}
+  .balance-visual{position:relative;}
+  .beam-track{
+    position:relative; height:2px; background:rgba(21,25,26,0.15); border-radius:2px; margin:60px 0 40px;
+  }
+  .beam-fill{
+    position:absolute; top:0; left:0; height:2px; background:linear-gradient(90deg, var(--jade), var(--gold));
+    width:50%; transition:width 0.25s ease;
+  }
+  .beam-dot{
+    position:absolute; top:50%; width:18px; height:18px; border-radius:50%; background:var(--ink);
+    border:2px solid var(--gold); transform:translate(-50%,-50%); left:50%; transition:left 0.25s ease;
+    box-shadow:0 0 0 6px rgba(176,141,87,0.12);
+  }
+  input[type="range"]{
+    -webkit-appearance:none; width:100%; height:2px; background:transparent; position:relative; z-index:5;
+    cursor:pointer;
+  }
+  input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none; width:26px; height:26px; margin-top:0; opacity:0;
+  }
+  input[type="range"]::-moz-range-thumb{width:26px; height:26px; opacity:0; border:none;}
+  .beam-labels{display:flex; justify-content:space-between; font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--muted);}
+  .beam-labels span.active{color:var(--paper-text); font-weight:600;}
+  .balance-readout{
+    margin-top:36px; padding:26px 28px; background:var(--paper); border:1px solid rgba(21,25,26,0.1); border-radius:3px;
+  }
+  .balance-readout .pct{font-family:'IBM Plex Mono',monospace; font-size:2.2rem; color:var(--jade);}
+  .balance-readout p{margin-top:8px; color:var(--muted); font-size:0.94rem;}
+  .balance-copy h2{font-size:clamp(1.8rem,3vw,2.3rem); font-weight:400;}
+  .balance-copy p{margin-top:18px; color:var(--muted); max-width:48ch;}
+
+  /* ---------- PRESENCE / STATES ---------- */
+  .presence-wrap{display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start;}
+  .state-list{display:flex; flex-direction:column; gap:0; margin-top:8px;}
+  .state-row{
+    display:flex; justify-content:space-between; align-items:center; padding:20px 0;
+    border-bottom:1px solid rgba(242,237,223,0.12);
+  }
+  .state-row .name{font-family:'Spectral', serif; font-size:1.2rem; font-weight:400;}
+  .state-row .idx{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; color:var(--gold-soft);}
+  .trust-points{display:flex; flex-direction:column; gap:26px;}
+  .trust-point{display:flex; gap:18px;}
+  .trust-point .glyph{
+    width:36px; height:36px; border:1px solid var(--gold-soft); border-radius:50%; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:0.75rem; color:var(--gold-soft);
+  }
+  .trust-point h4{font-weight:500; font-size:1rem; color:var(--paper);}
+  .trust-point p{color:var(--muted); font-size:0.92rem; margin-top:4px;}
+
+  /* ---------- PROCESS ---------- */
+  .process-list{border-top:1px solid rgba(21,25,26,0.12);}
+  .process-row{
+    display:grid; grid-template-columns:70px 1fr 1fr; gap:24px; padding:30px 0; align-items:baseline;
+    border-bottom:1px solid rgba(21,25,26,0.12);
+  }
+  .process-row .pnum{font-family:'IBM Plex Mono',monospace; color:var(--gold); font-size:0.9rem;}
+  .process-row h4{font-size:1.15rem; font-weight:500;}
+  .process-row p{color:var(--muted); font-size:0.93rem;}
+
+  /* ---------- CTA BANNER ---------- */
+  .cta-banner{
+    background:linear-gradient(120deg, var(--jade), var(--jade-soft));
+    color:var(--paper); border-radius:4px; padding:56px 56px; display:flex; justify-content:space-between;
+    align-items:center; gap:40px; flex-wrap:wrap;
+  }
+  .cta-banner h3{font-size:1.7rem; font-weight:400; max-width:20ch;}
+  .cta-banner p{margin-top:10px; color:rgba(242,237,223,0.85); max-width:44ch; font-size:0.96rem;}
+  .cta-banner .btn-primary{background:var(--paper); color:var(--ink);}
+  .cta-banner .btn-primary:hover{background:var(--gold-soft);}
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(21,25,26,0.1); border:1px solid rgba(21,25,26,0.1); margin-top:20px;}
+  .advisor-card{background:var(--paper); padding:36px;}
+  .advisor-card .role{font-family:'IBM Plex Mono',monospace; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--jade);}
+  .advisor-card h3{margin-top:12px; font-size:1.4rem; font-weight:500;}
+  .advisor-links{margin-top:18px; display:flex; flex-direction:column; gap:10px;}
+  .advisor-links a{font-family:'IBM Plex Mono',monospace; font-size:0.9rem; display:flex; align-items:center; gap:10px; color:var(--paper-text); transition:color 0.2s;}
+  .advisor-links a:hover{color:var(--jade);}
+  .contact-meta{margin-top:50px; display:flex; gap:60px; flex-wrap:wrap;}
+  .contact-meta div h5{font-family:'IBM Plex Mono',monospace; font-size:0.7rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:8px;}
+  .contact-meta div p{font-size:0.95rem;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--ink); color:var(--muted); padding:56px 0 32px;}
+  .footer-top{display:flex; justify-content:space-between; gap:40px; flex-wrap:wrap; padding-bottom:36px; border-bottom:1px solid rgba(242,237,223,0.1);}
+  .footer-brand{color:var(--paper); font-family:'Spectral',serif; font-size:1.1rem;}
+  .footer-links{display:flex; gap:30px; flex-wrap:wrap;}
+  .footer-links a{font-size:0.85rem; color:var(--muted);}
+  .footer-links a:hover{color:var(--gold-soft);}
+  .disclaimer{margin-top:28px; font-size:0.78rem; line-height:1.8; color:var(--muted); max-width:900px;}
+  .disclaimer strong{color:var(--gold-soft);}
+  .footer-bottom{margin-top:24px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:0.78rem;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    .nav-links{display:none;}
+    .burger{display:flex;}
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-enso{order:-1; margin-bottom:20px;}
+    .enso-svg{max-width:220px;}
+    .services-grid{grid-template-columns:1fr 1fr;}
+    .balance-wrap, .presence-wrap, .contact-grid{grid-template-columns:1fr;}
+    .process-row{grid-template-columns:50px 1fr; }
+    .process-row p{grid-column:2/3;}
+    .cta-banner{padding:40px 28px; flex-direction:column; align-items:flex-start;}
+  }
+  @media (max-width:560px){
+    .wrap{padding:0 20px;}
+    .services-grid{grid-template-columns:1fr;}
+    .arn-strip{gap:14px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="none" stroke="#b08d57" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="98 12"/></svg>
+      <div class="brand-text">Zen Capital<small>Financial Services</small></div>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#balance">Our Approach</a>
+      <a href="#presence">Presence</a>
+      <a href="#process">How We Work</a>
+      <a href="#contact" class="nav-cta">Talk to Us</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<section class="hero">
+  <svg class="ripple-field" viewBox="0 0 640 640">
+    <circle cx="320" cy="320" r="20"/>
+    <circle cx="320" cy="320" r="20"/>
+    <circle cx="320" cy="320" r="20"/>
+    <circle cx="320" cy="320" r="20"/>
+  </svg>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">AMFI Registered Mutual Fund Distributor · ARN-361599</div>
+      <h1>Wealth that grows, <em>and</em> stays standing.</h1>
+      <p class="lede">Zen Capital Financial Services brings mutual funds, fixed deposits, bonds and NCDs, tax planning and portfolio review under one roof — so your money moves toward your goals without losing its footing.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Get a Free Portfolio Review</a>
+        <a href="https://wa.me/919167687108" class="btn btn-ghost" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+      <div class="arn-strip">
+        <span><strong>ARN</strong>&nbsp;361599</span>
+        <span><strong>Serving</strong>&nbsp;Maharashtra · MP · Gujarat · UP</span>
+        <span><strong>Email</strong>&nbsp;zencapitalfs@gmail.com</span>
+      </div>
+    </div>
+    <div class="hero-enso">
+      <svg class="enso-svg" viewBox="0 0 300 300">
+        <path class="enso-path" d="M 150 40 C 220 40 262 92 258 155 C 254 218 202 262 138 258 C 78 254 42 208 44 152 C 46 100 84 44 150 40" />
+      </svg>
+      <div class="enso-label">Balance, drawn<br>in one motion</div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">What We Do</span>
+      <h2>One relationship, every instrument you need</h2>
+      <p>We don't hand you off between products. Your equity, your fixed income and your tax planning are managed as one connected picture.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <h3>Mutual Funds</h3>
+        <p>Equity, debt and hybrid schemes selected against your actual time horizon and risk appetite — not the flavour of the month.</p>
+        <span class="service-tag">Growth</span>
+      </div>
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <h3>Fixed Deposits</h3>
+        <p>Bank and corporate FDs for the part of your money that simply needs to be there when you need it, at a predictable rate.</p>
+        <span class="service-tag">Stability</span>
+      </div>
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <h3>Bonds &amp; NCDs</h3>
+        <p>Access to bonds and non-convertible debentures for investors who want fixed income beyond the usual bank deposit.</p>
+        <span class="service-tag">Stability</span>
+      </div>
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <h3>Goal-Based Investing</h3>
+        <p>Retirement, a child's education, a home — each goal gets its own plan and its own mix of instruments, tracked separately.</p>
+        <span class="service-tag">Planning</span>
+      </div>
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <h3>Tax Planning</h3>
+        <p>ELSS, tax-saving instruments and timing decisions that reduce your outgo within the rules, not around them.</p>
+        <span class="service-tag">Planning</span>
+      </div>
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <h3>Free Portfolio Review</h3>
+        <p>Send us what you already hold. We'll tell you honestly what's working, what's overlapping, and what's missing — at no cost.</p>
+        <span class="service-tag">Free</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-alt" id="balance">
+  <div class="wrap">
+    <div class="balance-wrap">
+      <div class="balance-copy reveal">
+        <span class="sec-eyebrow">Our Approach</span>
+        <h2>Every investor sits somewhere on this line</h2>
+        <p>Move the slider to where you feel you stand today. It's the same conversation we start with every client — and the honest starting point for a plan that actually fits you, not a model portfolio.</p>
+      </div>
+      <div class="balance-visual reveal">
+        <div class="beam-track">
+          <div class="beam-fill" id="beamFill"></div>
+          <div class="beam-dot" id="beamDot"></div>
+        </div>
+        <input type="range" min="0" max="100" value="50" id="balanceSlider" aria-label="Balance between stability and growth">
+        <div class="beam-labels">
+          <span id="labelStability">Safe Fixed Income</span>
+          <span id="labelGrowth">Wealth Creation</span>
+        </div>
+        <div class="balance-readout">
+          <div class="pct mono" id="readoutPct">50 / 50</div>
+          <p id="readoutText">A balanced posture — roughly equal weight toward compounding growth and capital protection. We'd typically pair diversified equity mutual funds with FDs, bonds or NCDs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-dark" id="presence">
+  <div class="wrap presence-wrap">
+    <div class="reveal">
+      <span class="sec-eyebrow">Where We Work</span>
+      <h2 style="font-size:clamp(1.8rem,3vw,2.4rem); font-weight:400;">Present across four states, not confined to one city</h2>
+      <div class="state-list">
+        <div class="state-row"><span class="name">Maharashtra</span><span class="idx mono">01</span></div>
+        <div class="state-row"><span class="name">Madhya Pradesh</span><span class="idx mono">02</span></div>
+        <div class="state-row"><span class="name">Gujarat</span><span class="idx mono">03</span></div>
+        <div class="state-row"><span class="name">Uttar Pradesh</span><span class="idx mono">04</span></div>
+      </div>
+    </div>
+    <div class="trust-points reveal">
+      <div class="trust-point">
+        <div class="glyph mono">01</div>
+        <div><h4>AMFI Registered</h4><p>We operate under ARN-361599, within AMFI's regulatory framework for mutual fund distribution.</p></div>
+      </div>
+      <div class="trust-point">
+        <div class="glyph mono">02</div>
+        <div><h4>Product-agnostic advice</h4><p>Mutual funds, FDs, bonds and NCDs are evaluated on the same table, against your goal — not pushed by product margin.</p></div>
+      </div>
+      <div class="trust-point">
+        <div class="glyph mono">03</div>
+        <div><h4>Direct access to your advisor</h4><p>You deal directly with Anisha or Rohit — not a call centre queue or a rotating relationship manager.</p></div>
+      </div>
+      <div class="trust-point">
+        <div class="glyph mono">04</div>
+        <div><h4>No cost to review</h4><p>A first portfolio review is free, with no obligation to move anything.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">How We Work</span>
+      <h2>Four conversations, in order</h2>
+      <p>The process is the same whether you're starting fresh or moving your existing investments to us.</p>
+    </div>
+    <div class="process-list reveal">
+      <div class="process-row">
+        <span class="pnum mono">01</span>
+        <h4>Understand your goals</h4>
+        <p>We map what you're actually investing for — retirement, a purchase, a child's education — and by when.</p>
+      </div>
+      <div class="process-row">
+        <span class="pnum mono">02</span>
+        <h4>Review what you hold</h4>
+        <p>Existing mutual funds, FDs, bonds — assessed for overlap, risk and whether they still serve the goal.</p>
+      </div>
+      <div class="process-row">
+        <span class="pnum mono">03</span>
+        <h4>Design the allocation</h4>
+        <p>A specific mix of growth and fixed-income instruments, sized to your timeline and comfort with risk.</p>
+      </div>
+      <div class="process-row">
+        <span class="pnum mono">04</span>
+        <h4>Review, periodically</h4>
+        <p>We revisit the plan as markets, rates and your life circumstances change — not just once a year.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec-alt">
+  <div class="wrap reveal">
+    <div class="cta-banner">
+      <div>
+        <h3>Not sure if your current portfolio is working for you?</h3>
+        <p>Send us your statement. We'll review it and tell you plainly what to keep, what to change, and what's missing — free of charge.</p>
+      </div>
+      <a href="#contact" class="btn btn-primary">Request Free Review</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">Get In Touch</span>
+      <h2>Talk to Anisha or Rohit directly</h2>
+      <p>Call, WhatsApp or email — whichever is easiest for you. There's no call centre in between.</p>
+    </div>
+    <div class="contact-grid reveal">
+      <div class="advisor-card">
+        <div class="role">Advisor</div>
+        <h3>Anisha Vora</h3>
+        <div class="advisor-links">
+          <a href="tel:+919167687108">+91 91676 87108</a>
+          <a href="https://wa.me/919167687108" target="_blank" rel="noopener">WhatsApp Anisha</a>
+          <a href="mailto:zencapitalfs@gmail.com">zencapitalfs@gmail.com</a>
+        </div>
+      </div>
+      <div class="advisor-card">
+        <div class="role">Advisor</div>
+        <h3>Rohit Singhal</h3>
+        <div class="advisor-links">
+          <a href="tel:+9199179889412">+91 9917 98894 12</a>
+          <a href="mailto:zencapitalfs@gmail.com">zencapitalfs@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="contact-meta reveal">
+      <div>
+        <h5>Company</h5>
+        <p>Zen Capital Financial Services Pvt Ltd</p>
+      </div>
+      <div>
+        <h5>Registration</h5>
+        <p class="mono">ARN-361599</p>
+      </div>
+      <div>
+        <h5>Email</h5>
+        <p>zencapitalfs@gmail.com</p>
+      </div>
+      <div>
+        <h5>States Served</h5>
+        <p>Maharashtra, Madhya Pradesh, Gujarat, Uttar Pradesh</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">Zen Capital Financial Services Pvt Ltd</div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#balance">Our Approach</a>
+        <a href="#presence">Presence</a>
+        <a href="#process">How We Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <p class="disclaimer">
+      <strong>Mutual Fund investments are subject to market risks, read all scheme related documents carefully.</strong>
+      Zen Capital Financial Services Pvt Ltd is an AMFI-registered Mutual Fund Distributor (ARN-361599) and does not act as an Investment Adviser under SEBI regulations. Bonds, NCDs and Fixed Deposits carry credit, interest-rate and liquidity risk; please read the relevant offer document or prospectus carefully before investing. Past performance of any scheme is not indicative of future returns. Tax-planning information shared on this site is general in nature and not a substitute for advice from a qualified tax professional.
+    </p>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Zen Capital Financial Services Pvt Ltd. All rights reserved.</span>
+      <span>ARN-361599</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Mobile menu
+  const burger = document.getElementById('burger');
+  const navLinks = document.querySelector('.nav-links');
+  burger.addEventListener('click', () => {
+    const open = navLinks.style.display === 'flex';
+    navLinks.style.display = open ? 'none' : 'flex';
+    navLinks.style.cssText += open ? '' : 'position:fixed; top:76px; left:0; right:0; background:#15191a; flex-direction:column; padding:24px 32px; gap:20px; border-top:1px solid rgba(216,195,155,0.15);';
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Balance slider interaction
+  const slider = document.getElementById('balanceSlider');
+  const beamFill = document.getElementById('beamFill');
+  const beamDot = document.getElementById('beamDot');
+  const readoutPct = document.getElementById('readoutPct');
+  const readoutText = document.getElementById('readoutText');
+  const labelStability = document.getElementById('labelStability');
+  const labelGrowth = document.getElementById('labelGrowth');
+
+  function updateBalance(val){
+    beamFill.style.width = val + '%';
+    beamDot.style.left = val + '%';
+    const growth = val;
+    const stability = 100 - val;
+    readoutPct.textContent = stability + ' / ' + growth;
+    labelStability.classList.toggle('active', stability > growth);
+    labelGrowth.classList.toggle('active', growth > stability);
+    let text;
+    if(growth >= 70){
+      text = "A growth-leaning posture — weighted toward equity mutual funds for long-term compounding, with a smaller anchor in FDs or bonds for stability.";
+    } else if(growth >= 55){
+      text = "Growth-tilted but grounded — more in equity mutual funds, still supported by fixed income for a smoother ride.";
+    } else if(growth > 45){
+      text = "A balanced posture — roughly equal weight toward compounding growth and capital protection. We'd typically pair diversified equity mutual funds with FDs, bonds or NCDs.";
+    } else if(growth > 30){
+      text = "Stability-tilted — the larger share sits in FDs, bonds and NCDs, with equity mutual funds used to keep pace with inflation.";
+    } else {
+      text = "A capital-protection posture — mostly FDs, bonds and NCDs, with a small allocation to mutual funds so your money still has room to grow.";
+    }
+    readoutText.textContent = text;
+  }
+  slider.addEventListener('input', (e) => updateBalance(parseInt(e.target.value, 10)));
+  updateBalance(50);
+</script>
+
+</body>
+</html>
