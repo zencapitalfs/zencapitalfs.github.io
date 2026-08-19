@@ -57,7 +57,8 @@
 
   /* ---------- HERO ---------- */
   .hero{background:var(--navy); color:var(--paper); padding:170px 0 0; position:relative; overflow:hidden;}
-  .hero-bg{position:absolute; inset:0; z-index:0; opacity:0.5;}
+  .hero-bg{position:absolute; inset:0; z-index:0; width:100%; height:100%; object-fit:cover;}
+  .hero-overlay{position:absolute; inset:0; z-index:1; background:linear-gradient(100deg, rgba(13,24,38,0.96) 15%, rgba(13,24,38,0.75) 55%, rgba(13,24,38,0.55) 100%);}
   .hero-inner{position:relative; z-index:2; padding-bottom:90px;}
   .eyebrow{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold-soft); margin-bottom:22px; display:flex; align-items:center; gap:10px;}
   .eyebrow::before{content:''; width:26px; height:1px; background:var(--gold-soft);}
@@ -97,7 +98,8 @@
   /* ---------- APPROACH ---------- */
   .approach-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:20px;}
   .approach-photo{background:var(--navy); border-radius:4px; overflow:hidden; position:relative; min-height:340px; display:flex; align-items:flex-end; padding:32px;}
-  .approach-photo svg{position:absolute; inset:0; width:100%; height:100%;}
+  .approach-photo img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;}
+  .approach-photo .photo-overlay{position:absolute; inset:0; z-index:1; background:linear-gradient(0deg, rgba(13,24,38,0.92) 10%, rgba(13,24,38,0.15) 65%);}
   .approach-photo .cap{position:relative; z-index:2; color:var(--paper);}
   .approach-photo .cap h4{font-size:1.3rem; font-weight:400;}
   .approach-photo .cap p{color:var(--muted); font-size:0.9rem; margin-top:6px;}
@@ -109,23 +111,27 @@
   .approach-card p{margin-top:8px; font-size:0.86rem; color:var(--muted-dark);}
 
   /* ---------- SERVICES ---------- */
-  .services-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(246,244,238,0.08); border:1px solid rgba(246,244,238,0.08); margin-top:10px;}
-  .service-card{background:var(--navy); padding:34px 28px; transition:background 0.3s;}
+  .services-grid{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(246,244,238,0.08); border:1px solid rgba(246,244,238,0.08); margin-top:10px;}
+  .service-card{background:var(--navy); padding:34px; transition:background 0.3s;}
   .service-card:hover{background:var(--navy-soft);}
-  .service-icon{width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1rem;}
-  .service-card h3{margin-top:20px; font-size:1.15rem; font-weight:500; color:var(--paper);}
-  .service-card p{margin-top:10px; font-size:0.87rem; color:var(--muted);}
-  .service-tag{display:inline-block; margin-top:16px; font-family:'IBM Plex Mono',monospace; font-size:0.65rem; letter-spacing:0.08em; text-transform:uppercase; padding:4px 10px; border-radius:2px; border:1px solid;}
-  .tag-growth{color:var(--green-soft); border-color:var(--green-soft);}
-  .tag-stability{color:var(--gold-soft); border-color:var(--gold-soft);}
-  .tag-income{color:var(--blue); border-color:var(--blue);}
-  .tag-yield{color:var(--gold-soft); border-color:var(--gold-soft);}
+  .service-top{display:flex; justify-content:space-between; align-items:flex-start;}
+  .service-icon{width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.05rem;}
+  .service-arrow{width:26px; height:26px; border-radius:50%; border:1px solid rgba(246,244,238,0.2); display:flex; align-items:center; justify-content:center; font-size:0.85rem; color:var(--muted);}
+  .service-tag{display:block; margin-top:26px; font-family:'IBM Plex Mono',monospace; font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase;}
+  .tag-growth{color:var(--green-soft);}
+  .tag-stability{color:var(--gold-soft);}
+  .tag-income{color:var(--blue);}
+  .tag-yield{color:var(--gold-soft);}
+  .service-card h3{margin-top:10px; font-size:1.5rem; font-weight:500; color:var(--paper);}
+  .service-card p{margin-top:12px; font-size:0.9rem; color:var(--muted); max-width:44ch;}
 
   /* ---------- QUOTE ---------- */
-  .quote-sec{padding:120px 0; position:relative; overflow:hidden;}
-  .quote-sec .bonsai-art{position:absolute; right:-40px; top:50%; transform:translateY(-50%); width:420px; opacity:0.9;}
+  .quote-card{position:relative; border-radius:6px; overflow:hidden; min-height:280px; display:flex; align-items:center; padding:56px;}
+  .quote-card img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;}
+  .quote-card .quote-overlay{position:absolute; inset:0; z-index:1; background:linear-gradient(90deg, rgba(13,24,38,0.94) 30%, rgba(13,24,38,0.35) 75%, rgba(13,24,38,0.1) 100%);}
+  .quote-card .quote-content{position:relative; z-index:2; max-width:20ch;}
   .quote-eyebrow{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom:20px; display:block;}
-  .quote-sec blockquote{font-family:'Spectral',serif; font-size:clamp(1.7rem,3.6vw,2.6rem); font-weight:400; font-style:italic; max-width:16ch; line-height:1.3; color:var(--ink);}
+  .quote-card blockquote{font-family:'Spectral',serif; font-size:clamp(1.7rem,3.6vw,2.6rem); font-weight:400; font-style:italic; line-height:1.3; color:var(--paper);}
 
   /* ---------- CALCULATOR ---------- */
   .calc-tabs{display:flex; gap:10px; margin-top:24px;}
@@ -138,6 +144,44 @@
   .goal-result .big{font-family:'IBM Plex Mono',monospace; font-size:2.4rem; color:var(--gold-soft); margin-top:14px;}
   .goal-result p{margin-top:12px; color:var(--muted); font-size:0.92rem;}
   .goal-result .btn{margin-top:26px;}
+
+  /* ---------- LIFECYCLE CALCULATOR ---------- */
+  .life-panel{margin-top:34px; display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:start;}
+  .life-panel[hidden]{display:none;}
+  .life-section{background:var(--navy-soft); border-radius:6px; padding:28px; border:1px solid rgba(246,244,238,0.1);}
+  .life-section.accum{border-color:rgba(201,162,74,0.4);}
+  .life-section.swp{border-color:rgba(94,140,79,0.4);}
+  .life-badge{display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; padding:3px 10px; border-radius:12px; font-weight:600; margin-right:8px;}
+  .life-badge.accum{background:var(--gold); color:var(--navy);}
+  .life-badge.swp{background:var(--green); color:var(--navy);}
+  .life-title{font-family:'Spectral',serif; font-size:1.15rem; color:var(--paper); display:flex; align-items:center; margin-bottom:18px;}
+  .life-field{margin-top:16px;}
+  .life-field label{display:block; font-size:0.82rem; color:var(--muted); margin-bottom:8px;}
+  .life-field input[type="text"], .life-field input[type="number"], .life-field select{
+    width:100%; background:rgba(246,244,238,0.05); border:1px solid rgba(246,244,238,0.18); border-radius:4px;
+    padding:11px 14px; color:var(--paper); font-family:'IBM Plex Mono',monospace; font-size:0.92rem;
+  }
+  .life-field select option{background:var(--navy);}
+  .life-toggle-row{display:flex; justify-content:space-between; align-items:center; margin-top:18px; padding:12px 14px; background:rgba(246,244,238,0.04); border-radius:4px; border:1px solid rgba(246,244,238,0.12);}
+  .life-toggle-row span{font-size:0.85rem; color:var(--paper);}
+  .life-switch{position:relative; width:42px; height:23px; flex-shrink:0;}
+  .life-switch input{opacity:0; width:0; height:0;}
+  .life-slider-track{position:absolute; cursor:pointer; top:0; left:0; right:0; bottom:0; background:rgba(246,244,238,0.2); border-radius:24px; transition:0.2s;}
+  .life-slider-track:before{position:absolute; content:""; height:17px; width:17px; left:3px; bottom:3px; background:var(--paper); border-radius:50%; transition:0.2s;}
+  .life-switch input:checked + .life-slider-track{background:var(--gold);}
+  .life-switch input:checked + .life-slider-track:before{transform:translateX(19px); background:var(--navy);}
+  .life-hint{font-size:0.74rem; color:var(--muted); margin-top:6px;}
+  .life-subfields{display:none;}
+  .life-subfields.on{display:block;}
+  .life-results{grid-column:1/-1; margin-top:4px; padding:26px 28px; border-radius:6px; border:1px solid rgba(246,244,238,0.15); background:rgba(246,244,238,0.03);}
+  .life-results.sustains{border-color:var(--green); background:rgba(94,140,79,0.1);}
+  .life-results.depletes{border-color:#c96a4a; background:rgba(201,106,74,0.1);}
+  .life-result-row{display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid rgba(246,244,238,0.08);}
+  .life-result-row .l{font-size:0.85rem; color:var(--muted);}
+  .life-result-row .v{font-family:'IBM Plex Mono',monospace; font-size:0.95rem; color:var(--paper);}
+  .life-result-row.total .l{font-weight:600; color:var(--paper);}
+  .life-result-row.total .v{font-size:1.3rem; color:var(--gold-soft);}
+  .life-note{margin-top:14px; font-size:0.85rem; color:var(--muted); line-height:1.7;}
   .calc-controls .field{margin-bottom:30px;}
   .calc-controls label{display:flex; justify-content:space-between; font-size:0.88rem; color:var(--muted); margin-bottom:10px;}
   .calc-controls label .val{color:var(--gold-soft); font-family:'IBM Plex Mono',monospace; font-weight:500;}
@@ -232,10 +276,8 @@
 </header>
 
 <section class="hero">
-  <svg class="hero-bg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="0,700 0,420 180,220 340,380 480,180 650,400 800,260 980,420 1200,300 1200,700" fill="#16243a"/>
-    <polygon points="0,700 0,520 220,360 420,480 620,340 850,500 1050,400 1200,480 1200,700" fill="#0f1c2c"/>
-  </svg>
+  <img class="hero-bg" src="hero-tree.jpg" alt="">
+  <div class="hero-overlay"></div>
   <div class="wrap hero-inner">
     <div class="eyebrow">Zen Capital · ARN 361599</div>
     <h1>Wealth creation, <em>safe fixed income</em>, with a zen mindset.</h1>
@@ -262,13 +304,8 @@
     </div>
     <div class="approach-grid reveal">
       <div class="approach-photo">
-        <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg" style="position:absolute;inset:0;">
-          <polygon points="60,300 180,150 240,220 320,110 460,300" fill="#1c3352"/>
-          <polygon points="180,150 210,180 150,180" fill="#f6f4ee" opacity="0.8"/>
-          <polygon points="320,110 345,140 295,140" fill="#f6f4ee" opacity="0.8"/>
-          <rect x="0" y="290" width="500" height="110" fill="#0d1826"/>
-          <path d="M250 350 C230 320 200 320 190 350 C185 365 200 378 250 378 C300 378 315 365 310 350 C300 320 270 320 250 350" fill="#5e8c4f" opacity="0.85"/>
-        </svg>
+        <img src="approach-photo.jpg" alt="Advisor reviewing portfolio data">
+        <div class="photo-overlay"></div>
         <div class="cap">
           <h4>Disciplined. Transparent. Personal.</h4>
           <p>A dedicated advisor for every family we serve.</p>
@@ -319,45 +356,56 @@
     </div>
     <div class="services-grid reveal">
       <div class="service-card">
-        <div class="service-icon" style="background:rgba(94,140,79,0.15); color:var(--green-soft);">↗</div>
+        <div class="service-top">
+          <div class="service-icon" style="background:rgba(94,140,79,0.15); color:var(--green-soft);">↗</div>
+          <div class="service-arrow">↗</div>
+        </div>
+        <span class="service-tag tag-growth">Growth</span>
         <h3>Mutual Funds</h3>
         <p>Equity, hybrid and debt funds handpicked for your goals. SIPs, lump sum and STPs managed end-to-end with ongoing rebalancing.</p>
-        <span class="service-tag tag-growth">Growth</span>
       </div>
       <div class="service-card">
-        <div class="service-icon" style="background:rgba(201,162,74,0.15); color:var(--gold-soft);">🪙</div>
+        <div class="service-top">
+          <div class="service-icon" style="background:rgba(201,162,74,0.15); color:var(--gold-soft);">🪙</div>
+          <div class="service-arrow">↗</div>
+        </div>
+        <span class="service-tag tag-stability">Stability</span>
         <h3>Fixed Deposits</h3>
         <p>High-yield corporate and bank FDs with laddering strategies for steady, predictable returns on the money you can't afford to risk.</p>
-        <span class="service-tag tag-stability">Stability</span>
       </div>
       <div class="service-card">
-        <div class="service-icon" style="background:rgba(47,102,144,0.15); color:var(--blue);">🏛</div>
+        <div class="service-top">
+          <div class="service-icon" style="background:rgba(47,102,144,0.15); color:var(--blue);">🏛</div>
+          <div class="service-arrow">↗</div>
+        </div>
+        <span class="service-tag tag-income">Income</span>
         <h3>Bonds</h3>
         <p>Government and AAA-rated corporate bonds for reliable interest income and capital preservation.</p>
-        <span class="service-tag tag-income">Income</span>
       </div>
       <div class="service-card">
-        <div class="service-icon" style="background:rgba(201,162,74,0.15); color:var(--gold-soft);">📄</div>
+        <div class="service-top">
+          <div class="service-icon" style="background:rgba(201,162,74,0.15); color:var(--gold-soft);">📄</div>
+          <div class="service-arrow">↗</div>
+        </div>
+        <span class="service-tag tag-yield">Yield</span>
         <h3>NCDs</h3>
         <p>Curated Non-Convertible Debentures offering attractive fixed returns from trusted, well-rated issuers.</p>
-        <span class="service-tag tag-yield">Yield</span>
       </div>
     </div>
   </div>
 </section>
 
-<section class="quote-sec">
+<section class="sec-dim">
   <div class="wrap">
-    <span class="quote-eyebrow reveal">Patient Growth</span>
-    <blockquote class="reveal">Wealth, like a tree, is grown slowly — with intention and season.</blockquote>
+    <div class="quote-card reveal">
+      <img src="bonsai.jpg" alt="Bonsai tree">
+      <div class="quote-overlay"></div>
+      <div class="quote-content">
+        <span class="quote-eyebrow">Patient Growth</span>
+        <blockquote>Wealth, like a bonsai, is shaped slowly — with intention and care.</blockquote>
+      </div>
+    </div>
   </div>
-  <svg class="bonsai-art reveal" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-    <path d="M200 350 C190 300 210 260 195 220 C180 180 220 160 210 120" stroke="#5e8c4f" stroke-width="6" fill="none" stroke-linecap="round"/>
-    <circle cx="195" cy="220" r="30" fill="#8fb87e" opacity="0.5"/>
-    <circle cx="230" cy="180" r="24" fill="#5e8c4f" opacity="0.5"/>
-    <circle cx="170" cy="160" r="20" fill="#8fb87e" opacity="0.4"/>
-    <circle cx="210" cy="120" r="22" fill="#5e8c4f" opacity="0.5"/>
-  </svg>
 </section>
 
 <section class="sec-dark" id="calculators">
@@ -371,6 +419,7 @@
       <div class="calc-tabs">
         <button class="calc-tab active" data-tab="sip">SIP Calculator</button>
         <button class="calc-tab" data-tab="goal">Goal Planner</button>
+        <button class="calc-tab" data-tab="life">Investment Lifecycle</button>
       </div>
       <div class="calc-panel" id="panel-sip">
         <div class="calc-controls">
@@ -414,6 +463,88 @@
           <div class="big" id="goalRequired">₹0</div>
           <p id="goalSummary">Invest this every month to reach your target.</p>
           <a href="#review" class="btn btn-primary">Start this plan with us</a>
+        </div>
+      </div>
+      <div class="life-panel" id="panel-life" hidden>
+        <div class="life-section accum">
+          <div class="life-title"><span class="life-badge accum">Phase 1</span> Accumulation</div>
+          <div class="life-field">
+            <label>Lumpsum Investment (₹)</label>
+            <input type="text" inputmode="numeric" class="life-amount" id="lc_lumpsum" value="5,00,000">
+          </div>
+          <div class="life-field">
+            <label>Expected CAGR (%)</label>
+            <input type="number" id="lc_accumCagr" value="12" min="0" step="0.1">
+          </div>
+          <div class="life-field">
+            <label>Accumulation Tenure (Years)</label>
+            <input type="number" id="lc_accumYears" value="10" min="0" step="1">
+          </div>
+          <div class="life-toggle-row">
+            <span>Add Monthly SIP</span>
+            <label class="life-switch">
+              <input type="checkbox" id="lc_sipToggle">
+              <span class="life-slider-track"></span>
+            </label>
+          </div>
+          <div class="life-subfields" id="lc_sipFields">
+            <div class="life-field">
+              <label>Monthly SIP Amount (₹)</label>
+              <input type="text" inputmode="numeric" class="life-amount" id="lc_sipAmount" value="10,000">
+            </div>
+          </div>
+        </div>
+        <div class="life-section swp">
+          <div class="life-title"><span class="life-badge swp">Phase 2</span> Withdrawal (SWP)</div>
+          <div class="life-toggle-row">
+            <span>Start SWP after accumulation</span>
+            <label class="life-switch">
+              <input type="checkbox" id="lc_swpToggle">
+              <span class="life-slider-track"></span>
+            </label>
+          </div>
+          <div class="life-subfields" id="lc_swpFields">
+            <div class="life-field">
+              <label>Starting Corpus for SWP (₹)</label>
+              <input type="text" inputmode="numeric" class="life-amount" id="lc_swpCorpus" value="0">
+              <div class="life-hint">Auto-filled from Phase 1 corpus — edit to override</div>
+            </div>
+            <div class="life-field">
+              <label>Expected CAGR during SWP (%)</label>
+              <input type="number" id="lc_swpCagr" value="10" min="0" step="0.1">
+            </div>
+            <div class="life-field">
+              <label>Initial Withdrawal Amount (₹)</label>
+              <input type="text" inputmode="numeric" class="life-amount" id="lc_swpAmount" value="40,000">
+            </div>
+            <div class="life-field">
+              <label>Withdrawal Frequency</label>
+              <select id="lc_swpFreq">
+                <option value="monthly">Monthly</option>
+                <option value="yearly">Yearly</option>
+              </select>
+            </div>
+            <div class="life-field">
+              <label>Annual Step-up in Withdrawal (%)</label>
+              <input type="number" id="lc_stepUp" value="5" min="0" step="0.1">
+              <div class="life-hint">Withdrawal amount increases by this % every year</div>
+            </div>
+          </div>
+        </div>
+        <div class="life-results" id="lc_resultsBox">
+          <div class="life-result-row">
+            <span class="l">Corpus at end of Phase 1</span>
+            <span class="v" id="lc_phase1Result">₹0</span>
+          </div>
+          <div class="life-result-row" id="lc_phase2Row" style="display:none;">
+            <span class="l">SWP lasts</span>
+            <span class="v" id="lc_swpDurationResult">-</span>
+          </div>
+          <div class="life-result-row total" id="lc_finalRow" style="display:none;">
+            <span class="l">Corpus reaches ₹0 in</span>
+            <span class="v" id="lc_finalResult">-</span>
+          </div>
+          <div class="life-note" id="lc_noteResult"></div>
         </div>
       </div>
       <p style="font-size:0.78rem; color:var(--muted); margin-top:18px;">Illustrative only. Actual mutual fund returns are market-linked and not guaranteed.</p>
@@ -616,15 +747,15 @@
   const tabs = document.querySelectorAll('.calc-tab');
   const panelSip = document.getElementById('panel-sip');
   const panelGoal = document.getElementById('panel-goal');
+  const panelLife = document.getElementById('panel-life');
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
-      if(tab.dataset.tab === 'sip'){
-        panelSip.hidden = false; panelGoal.hidden = true;
-      } else {
-        panelSip.hidden = true; panelGoal.hidden = false;
-      }
+      panelSip.hidden = true; panelGoal.hidden = true; panelLife.hidden = true;
+      if(tab.dataset.tab === 'sip') panelSip.hidden = false;
+      else if(tab.dataset.tab === 'goal') panelGoal.hidden = false;
+      else panelLife.hidden = false;
     });
   });
 
@@ -651,6 +782,152 @@
   }
   [goalAmt, goalYrs, goalRet].forEach(el => el.addEventListener('input', calcGoal));
   calcGoal();
+
+  // ---------- Investment Lifecycle Calculator ----------
+  function lcGetAmount(id) {
+    const raw = document.getElementById(id).value || '';
+    const cleaned = raw.replace(/,/g, '').trim();
+    return parseFloat(cleaned) || 0;
+  }
+  function lcFormatWithCommas(digitsStr) {
+    if (!digitsStr) return '';
+    const num = parseInt(digitsStr, 10);
+    if (isNaN(num)) return '';
+    return num.toLocaleString('en-IN');
+  }
+  function lcSetupAmountInputs() {
+    document.querySelectorAll('.life-amount').forEach(input => {
+      input.addEventListener('input', function() {
+        const cursorFromEnd = this.value.length - this.selectionStart;
+        const digitsOnly = this.value.replace(/[^\d]/g, '');
+        this.value = lcFormatWithCommas(digitsOnly);
+        const newPos = Math.max(0, this.value.length - cursorFromEnd);
+        this.setSelectionRange(newPos, newPos);
+      });
+      const digitsOnly = input.value.replace(/[^\d]/g, '');
+      input.value = lcFormatWithCommas(digitsOnly);
+    });
+  }
+
+  function lcCalcAccumulation() {
+    const lumpsum = lcGetAmount('lc_lumpsum');
+    const cagr = parseFloat(document.getElementById('lc_accumCagr').value) || 0;
+    const years = parseFloat(document.getElementById('lc_accumYears').value) || 0;
+    const sipOn = document.getElementById('lc_sipToggle').checked;
+    const sipAmount = sipOn ? lcGetAmount('lc_sipAmount') : 0;
+
+    const r = cagr / 100;
+    const lumpsumFV = lumpsum * Math.pow(1 + r, years);
+
+    let sipFV = 0;
+    const months = years * 12;
+    if (sipOn && sipAmount > 0 && months > 0) {
+      const i = r / 12;
+      sipFV = i > 0 ? sipAmount * ((Math.pow(1 + i, months) - 1) / i) * (1 + i) : sipAmount * months;
+    }
+    return lumpsumFV + sipFV;
+  }
+
+  function lcCalcSWP(corpus) {
+    const cagr = parseFloat(document.getElementById('lc_swpCagr').value) || 0;
+    const swpAmount = lcGetAmount('lc_swpAmount');
+    const freq = document.getElementById('lc_swpFreq').value;
+    const stepUp = (parseFloat(document.getElementById('lc_stepUp').value) || 0) / 100;
+
+    const r = cagr / 100;
+    const periodsPerYear = freq === 'monthly' ? 12 : 1;
+    const periodRate = Math.pow(1 + r, 1 / periodsPerYear) - 1;
+
+    let balance = corpus;
+    let period = 0;
+    const maxPeriods = periodsPerYear * 100;
+
+    while (balance > 0 && period < maxPeriods) {
+      const yearIndex = Math.floor(period / periodsPerYear);
+      const currentWithdrawal = swpAmount * Math.pow(1 + stepUp, yearIndex);
+      balance = balance * (1 + periodRate) - currentWithdrawal;
+      period++;
+    }
+    const sustains = period >= maxPeriods && balance > 0;
+    const totalYears = period / periodsPerYear;
+    return { sustains, totalYears };
+  }
+
+  function lcCalculate() {
+    const phase1Corpus = lcCalcAccumulation();
+    document.getElementById('lc_phase1Result').textContent = fmt(phase1Corpus);
+
+    const swpCorpusField = document.getElementById('lc_swpCorpus');
+    if (swpCorpusField.dataset.auto !== 'false') {
+      swpCorpusField.value = Math.round(phase1Corpus).toLocaleString('en-IN');
+      swpCorpusField.dataset.auto = 'true';
+    }
+
+    const swpOn = document.getElementById('lc_swpToggle').checked;
+    const box = document.getElementById('lc_resultsBox');
+    const phase2Row = document.getElementById('lc_phase2Row');
+    const finalRow = document.getElementById('lc_finalRow');
+    const noteEl = document.getElementById('lc_noteResult');
+
+    if (!swpOn) {
+      box.className = 'life-results';
+      phase2Row.style.display = 'none';
+      finalRow.style.display = 'none';
+      const accumYears = parseFloat(document.getElementById('lc_accumYears').value) || 0;
+      noteEl.textContent = `After ${accumYears} year(s) of accumulation, your corpus grows to ${fmt(phase1Corpus)}. Enable SWP to see how long it lasts under withdrawals.`;
+      return;
+    }
+
+    const swpCorpus = lcGetAmount('lc_swpCorpus');
+    const result = lcCalcSWP(swpCorpus);
+    const accumYears = parseFloat(document.getElementById('lc_accumYears').value) || 0;
+    const stepUp = parseFloat(document.getElementById('lc_stepUp').value) || 0;
+    const swpAmount = lcGetAmount('lc_swpAmount');
+    const freq = document.getElementById('lc_swpFreq').value;
+
+    phase2Row.style.display = 'flex';
+    finalRow.style.display = 'flex';
+
+    if (result.sustains) {
+      box.className = 'life-results sustains';
+      document.getElementById('lc_swpDurationResult').textContent = '100+ years';
+      document.getElementById('lc_finalResult').textContent = 'Never depletes';
+      noteEl.textContent = `Starting from ${fmt(swpCorpus)} after Phase 1, a ${freq} withdrawal of ${fmt(swpAmount)} stepping up ${stepUp}% every year is sustainable indefinitely at the given CAGR — growth outpaces withdrawals.`;
+    } else {
+      box.className = 'life-results depletes';
+      const years = Math.floor(result.totalYears);
+      const remMonths = Math.round((result.totalYears - years) * 12);
+      let durationText = '';
+      if (years > 0) durationText += `${years} yr${years !== 1 ? 's' : ''} `;
+      if (remMonths > 0) durationText += `${remMonths} mo${remMonths !== 1 ? 's' : ''}`;
+      if (durationText === '') durationText = 'Less than 1 month';
+
+      document.getElementById('lc_swpDurationResult').textContent = durationText.trim();
+      const totalTimeline = accumYears + result.totalYears;
+      document.getElementById('lc_finalResult').textContent = `Year ${totalTimeline.toFixed(1)} (${durationText.trim()} into SWP)`;
+      noteEl.textContent = `Phase 1 builds ${fmt(phase1Corpus)} over ${accumYears} years. Phase 2 withdraws ${fmt(swpAmount)} ${freq}, stepping up ${stepUp}% annually, depleting the corpus in ${durationText.trim()} — a total timeline of ~${totalTimeline.toFixed(1)} years from today.`;
+    }
+  }
+
+  document.getElementById('lc_sipToggle').addEventListener('change', function() {
+    document.getElementById('lc_sipFields').classList.toggle('on', this.checked);
+    lcCalculate();
+  });
+  document.getElementById('lc_swpToggle').addEventListener('change', function() {
+    document.getElementById('lc_swpFields').classList.toggle('on', this.checked);
+    lcCalculate();
+  });
+  document.getElementById('lc_swpCorpus').addEventListener('input', function() {
+    this.dataset.auto = 'false';
+    lcCalculate();
+  });
+  ['lc_lumpsum', 'lc_accumCagr', 'lc_accumYears', 'lc_sipAmount', 'lc_swpCagr', 'lc_swpAmount', 'lc_stepUp'].forEach(id => {
+    document.getElementById(id).addEventListener('input', lcCalculate);
+  });
+  document.getElementById('lc_swpFreq').addEventListener('change', lcCalculate);
+
+  lcSetupAmountInputs();
+  lcCalculate();
 
   // Free review form -> mailto
   document.getElementById('reviewForm').addEventListener('submit', function(e){
