@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zen Capital Financial Services | Mutual Funds, FDs, Bonds &amp; NCDs | ARN-361599</title>
-<meta name="description" content="Zen Capital Financial Services Pvt Ltd — mutual fund distribution, fixed deposits, bonds &amp; NCDs, tax planning and free portfolio review. Serving investors across Maharashtra, Madhya Pradesh, Gujarat and Uttar Pradesh. AMFI Registered, ARN-361599.">
+<meta name="description" content="Zen Capital Financial Services Pvt Ltd — mutual fund distribution, fixed deposits, bonds &amp; NCDs, tax planning and free portfolio review. PAN India presence. AMFI Registered, ARN-361599.">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -222,6 +222,11 @@
   .review-form textarea{resize:vertical; min-height:90px;}
   .review-form input::placeholder, .review-form textarea::placeholder{color:var(--muted);}
   .review-form button{grid-column:1/-1; margin-top:6px;}
+  .review-form button[disabled]{opacity:0.6; cursor:not-allowed;}
+  .review-success{margin-top:10px; padding:32px; background:rgba(94,140,79,0.12); border:1px solid var(--green); border-radius:6px;}
+  .review-success h3{font-size:1.3rem; font-weight:500; color:var(--paper);}
+  .review-success p{margin-top:10px; color:var(--muted); font-size:0.95rem;}
+  .review-error{margin-top:14px; color:#e0937a; font-size:0.88rem;}
   .form-note{grid-column:1/-1; font-size:0.78rem; color:var(--muted); margin-top:-6px;}
 
   /* ---------- FOOTER ---------- */
@@ -290,8 +295,8 @@
   </div>
   <div class="marquee">
     <div class="marquee-track">
-      <span>Maharashtra ✦ Madhya Pradesh ✦ Gujarat ✦ Uttar Pradesh ✦ Maharashtra ✦ Madhya Pradesh ✦ Gujarat ✦ Uttar Pradesh ✦</span>
-      <span>Maharashtra ✦ Madhya Pradesh ✦ Gujarat ✦ Uttar Pradesh ✦ Maharashtra ✦ Madhya Pradesh ✦ Gujarat ✦ Uttar Pradesh ✦</span>
+      <span>PAN India Presence ✦ Serving Investors Nationwide ✦ AMFI Registered ✦ ARN-361599 ✦ PAN India Presence ✦ Serving Investors Nationwide ✦ AMFI Registered ✦ ARN-361599 ✦</span>
+      <span>PAN India Presence ✦ Serving Investors Nationwide ✦ AMFI Registered ✦ ARN-361599 ✦ PAN India Presence ✦ Serving Investors Nationwide ✦ AMFI Registered ✦ ARN-361599 ✦</span>
     </div>
   </div>
 </section>
@@ -564,7 +569,7 @@
         <img src="advisors-photo.jpg" alt="Advisors discussing a client's portfolio">
       </div>
       <div class="about-text">
-        <p>Zen Capital Financial Services Pvt Ltd is an AMFI-registered mutual fund distributor (ARN-361599) serving families across Maharashtra, Madhya Pradesh, Gujarat and Uttar Pradesh. You deal directly with Anisha or Rohit — not a call centre queue.</p>
+        <p>Zen Capital Financial Services Pvt Ltd is an AMFI-registered mutual fund distributor (ARN-361599) with a PAN India presence, serving families across the country. You deal directly with Anisha or Rohit — not a call centre queue.</p>
         <div class="advisor-grid">
           <div class="advisor-card">
             <h4>Anisha Vora</h4>
@@ -591,22 +596,53 @@
         <p>Share a few details and one of our advisors will call you for a complimentary, no-obligation review of your goals and portfolio.</p>
         <div class="review-meta">
           <a href="mailto:zencapitalfs@gmail.com">✉ zencapitalfs@gmail.com</a>
-          <span style="font-family:'IBM Plex Mono',monospace; font-size:0.9rem; color:var(--muted);">📍 Maharashtra · MP · Gujarat · UP</span>
+          <span style="font-family:'IBM Plex Mono',monospace; font-size:0.9rem; color:var(--muted);">📍 PAN India Presence</span>
         </div>
       </div>
-      <form class="review-form reveal" id="reviewForm">
-        <input type="text" id="rf_name" placeholder="Full name" required>
-        <input type="tel" id="rf_phone" placeholder="Phone number" required>
-        <input type="email" id="rf_email" class="full" placeholder="Email address" required>
-        <select id="rf_state">
+      <form class="review-form reveal" id="reviewForm" action="https://formspree.io/f/mqpzgjgd" method="POST">
+        <input type="text" name="name" id="rf_name" placeholder="Full name" required>
+        <input type="tel" name="phone" id="rf_phone" placeholder="Phone number" required>
+        <input type="email" name="email" id="rf_email" class="full" placeholder="Email address" required>
+        <select name="state" id="rf_state">
           <option value="">Your state</option>
-          <option>Maharashtra</option>
-          <option>Madhya Pradesh</option>
+          <option>Andhra Pradesh</option>
+          <option>Arunachal Pradesh</option>
+          <option>Assam</option>
+          <option>Bihar</option>
+          <option>Chhattisgarh</option>
+          <option>Goa</option>
           <option>Gujarat</option>
+          <option>Haryana</option>
+          <option>Himachal Pradesh</option>
+          <option>Jharkhand</option>
+          <option>Karnataka</option>
+          <option>Kerala</option>
+          <option>Madhya Pradesh</option>
+          <option>Maharashtra</option>
+          <option>Manipur</option>
+          <option>Meghalaya</option>
+          <option>Mizoram</option>
+          <option>Nagaland</option>
+          <option>Odisha</option>
+          <option>Punjab</option>
+          <option>Rajasthan</option>
+          <option>Sikkim</option>
+          <option>Tamil Nadu</option>
+          <option>Telangana</option>
+          <option>Tripura</option>
           <option>Uttar Pradesh</option>
-          <option>Other</option>
+          <option>Uttarakhand</option>
+          <option>West Bengal</option>
+          <option>Andaman and Nicobar Islands</option>
+          <option>Chandigarh</option>
+          <option>Dadra and Nagar Haveli and Daman and Diu</option>
+          <option>Delhi (NCT)</option>
+          <option>Jammu and Kashmir</option>
+          <option>Ladakh</option>
+          <option>Lakshadweep</option>
+          <option>Puducherry</option>
         </select>
-        <select id="rf_interest">
+        <select name="interested_in" id="rf_interest">
           <option value="">I'm interested in</option>
           <option>Mutual Funds</option>
           <option>Fixed Deposits</option>
@@ -614,10 +650,15 @@
           <option>Tax Planning</option>
           <option>Full Portfolio Review</option>
         </select>
-        <textarea id="rf_msg" class="full" placeholder="Anything you'd like us to know? (optional)"></textarea>
-        <p class="form-note">Submitting opens your email app with these details pre-filled to zencapitalfs@gmail.com.</p>
-        <button type="submit" class="btn btn-primary full">Request my free review</button>
+        <textarea name="message" id="rf_msg" class="full" placeholder="Anything you'd like us to know? (optional)"></textarea>
+        <input type="hidden" name="_subject" value="New Free Portfolio Review Request - Zen Capital">
+        <p class="form-note">Your details go straight to our advisors — no extra step needed on your end.</p>
+        <button type="submit" class="btn btn-primary full" id="rf_submitBtn">Request my free review</button>
       </form>
+      <div class="review-success reveal" id="reviewSuccess" hidden>
+        <h3>Thank you, we've received your details.</h3>
+        <p>One of our advisors will reach out to you shortly. If it's urgent, feel free to call or WhatsApp Anisha or Rohit directly.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -924,25 +965,41 @@
   lcSetupAmountInputs();
   lcCalculate();
 
-  // Free review form -> mailto
+  // Free review form -> Formspree (silent submission, no email app redirect)
   document.getElementById('reviewForm').addEventListener('submit', function(e){
     e.preventDefault();
-    const name = document.getElementById('rf_name').value;
-    const phone = document.getElementById('rf_phone').value;
-    const email = document.getElementById('rf_email').value;
-    const state = document.getElementById('rf_state').value;
-    const interest = document.getElementById('rf_interest').value;
-    const msg = document.getElementById('rf_msg').value;
-    const subject = encodeURIComponent('Free Portfolio Review Request - ' + name);
-    const body = encodeURIComponent(
-      'Name: ' + name + '\n' +
-      'Phone: ' + phone + '\n' +
-      'Email: ' + email + '\n' +
-      'State: ' + state + '\n' +
-      'Interested in: ' + interest + '\n' +
-      'Message: ' + msg
-    );
-    window.location.href = 'mailto:zencapitalfs@gmail.com?subject=' + subject + '&body=' + body;
+    const form = e.target;
+    const submitBtn = document.getElementById('rf_submitBtn');
+    const successBox = document.getElementById('reviewSuccess');
+    let errorBox = document.getElementById('reviewError');
+    if (!errorBox) {
+      errorBox = document.createElement('p');
+      errorBox.id = 'reviewError';
+      errorBox.className = 'review-error';
+      form.appendChild(errorBox);
+    }
+    errorBox.textContent = '';
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        form.hidden = true;
+        successBox.hidden = false;
+      } else {
+        return response.json().then(data => {
+          throw new Error((data && data.errors) ? data.errors.map(x => x.message).join(', ') : 'Submission failed');
+        });
+      }
+    }).catch(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Request my free review';
+      errorBox.textContent = "Something went wrong sending this. Please try again, or email us directly at zencapitalfs@gmail.com.";
+    });
   });
 </script>
 
