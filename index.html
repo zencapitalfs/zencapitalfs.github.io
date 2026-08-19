@@ -62,8 +62,9 @@
   .hero-inner{position:relative; z-index:2; padding-bottom:90px;}
   .eyebrow{font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold-soft); margin-bottom:22px; display:flex; align-items:center; gap:10px;}
   .eyebrow::before{content:''; width:26px; height:1px; background:var(--gold-soft);}
-  .hero h1{font-size:clamp(2.3rem,5vw,3.9rem); font-weight:400; max-width:16ch; color:var(--paper);}
-  .hero h1 em{font-style:italic; color:var(--gold-soft); font-weight:300;}
+  .hero h1{font-size:clamp(2.3rem,5vw,3.9rem); font-weight:400; color:var(--paper); max-width:none;}
+  .hero h1 .accent-blue{font-style:italic; color:#93a1c2; font-weight:300; display:inline-block;}
+  .hero h1 .accent-gold{font-style:normal; color:var(--gold-soft); font-weight:400;}
   .hero p.lede{margin-top:26px; font-size:1.08rem; color:rgba(246,244,238,0.7); max-width:50ch; font-weight:300;}
   .hero-actions{display:flex; gap:16px; margin-top:40px; flex-wrap:wrap;}
   .btn{display:inline-flex; align-items:center; gap:10px; padding:15px 28px; font-size:0.88rem; letter-spacing:0.02em; border-radius:2px; transition:all 0.25s ease; cursor:pointer; border:1px solid transparent;}
@@ -197,7 +198,7 @@
   /* ---------- ABOUT / PEOPLE ---------- */
   .about-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:50px; align-items:center; margin-top:20px;}
   .about-art{background:var(--navy); border-radius:4px; min-height:380px; position:relative; overflow:hidden;}
-  .about-art svg{width:100%; height:100%;}
+  .about-art img{width:100%; height:100%; object-fit:cover; display:block;}
   .about-text p{color:var(--muted-dark); font-size:1rem; max-width:56ch;}
   .advisor-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:32px;}
   .advisor-card{background:var(--paper); border:1px solid rgba(23,27,31,0.12); border-radius:4px; padding:24px;}
@@ -280,7 +281,7 @@
   <div class="hero-overlay"></div>
   <div class="wrap hero-inner">
     <div class="eyebrow">Zen Capital · ARN 361599</div>
-    <h1>Wealth creation, <em>safe fixed income</em>, with a zen mindset.</h1>
+    <h1>Wealth creation,<br><span class="accent-blue">safe fixed income,</span><br>with a <span class="accent-gold">zen</span> mindset.</h1>
     <p class="lede">One trusted partner for mutual funds, fixed deposits, bonds and NCDs. Goal-based investing, free tax planning and a complimentary portfolio review — built around your life, not a product target.</p>
     <div class="hero-actions">
       <a href="#review" class="btn btn-primary">Get your free review ↓</a>
@@ -560,13 +561,7 @@
     </div>
     <div class="about-grid reveal">
       <div class="about-art">
-        <svg viewBox="0 0 400 380" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="380" fill="#0d1826"/>
-          <polygon points="0,380 0,240 90,150 160,220 240,110 320,230 400,170 400,380" fill="#1c3352"/>
-          <polygon points="90,150 105,175 75,175" fill="#f6f4ee" opacity="0.7"/>
-          <polygon points="240,110 258,140 222,140" fill="#f6f4ee" opacity="0.7"/>
-          <circle cx="330" cy="70" r="34" fill="#c9a24a" opacity="0.75"/>
-        </svg>
+        <img src="advisors-photo.jpg" alt="Advisors discussing a client's portfolio">
       </div>
       <div class="about-text">
         <p>Zen Capital Financial Services Pvt Ltd is an AMFI-registered mutual fund distributor (ARN-361599) serving families across Maharashtra, Madhya Pradesh, Gujarat and Uttar Pradesh. You deal directly with Anisha or Rohit — not a call centre queue.</p>
